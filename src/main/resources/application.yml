@@ -1,6 +1,6 @@
 server:
   port: 8080
-  
+  address: 0.0.0.0
 logging:
   config: classpath:log4j2-local.yml
   level:
@@ -9,6 +9,9 @@ logging:
     org.hibernate.type: trace
     
 spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
   main:
     banner-mode: console
   
