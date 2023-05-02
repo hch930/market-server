@@ -28,6 +28,6 @@ public class MemberRequestDto {
                 .email(email)
                 .authority(Authority.ROLE_USER)
                 .deleted(false)
-                .build();
+                .build(); 
     }
 }
