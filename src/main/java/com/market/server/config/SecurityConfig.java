@@ -64,7 +64,7 @@ public class SecurityConfig{
 		return http.build();
 	}
 	
-	private boolean isLocalMode() {
+	private Boolean isLocalMode() {
 		String profile = env.getActiveProfiles().length > 0 ? env.getActiveProfiles()[0] : "";
 		System.out.println("porfile: " + profile);
 		return profile.equals("local");

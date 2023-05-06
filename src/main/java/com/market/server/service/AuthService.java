@@ -27,4 +27,14 @@ public class AuthService {
 		Member member = requestDto.toMember(passwordEncoder);
 		return MemberResponseDto.responseMember(memberRepository.save(member));
 	}
+	
+	public Boolean selectexistsById(String userId) {
+		Boolean existById = false;
+		
+		if (memberRepository.existsByUserId(userId)) {
+			existById = true;
+        }
+		
+		return existById;
+	}
 }

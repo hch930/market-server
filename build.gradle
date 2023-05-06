@@ -48,6 +48,9 @@ dependencies {
     implementation 'it.ozimov:embedded-redis:0.7.2'
     //swagger
     implementation 'io.springfox:springfox-boot-starter:3.0.0'
+    //mail
+    implementation 'javax.mail:mail:1.4.7'
+    implementation 'org.springframework:spring-context-support:5.3.27'
 }
 
 tasks.named('test') {
