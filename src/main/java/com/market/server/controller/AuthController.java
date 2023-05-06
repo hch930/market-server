@@ -21,7 +21,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class AuthController {
 	private final AuthService authService;
-	private final MailService mailService;
+	//private final MailService mailService;
 	
 	@PostMapping("/signup")
 	public ResponseEntity<MemberResponseDto> createMember(@RequestBody MemberRequestDto requestDto){
@@ -29,8 +29,8 @@ public class AuthController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(null);
 	}
 	
-	@GetMapping("/findId/{userId}")
-	public Boolean findById(@PathVariable String userId) {
+	@GetMapping("/confirmId/{userId}")
+	public Boolean confirmId(@PathVariable String userId) {
 		return authService.selectexistsById(userId);
 	}
 }

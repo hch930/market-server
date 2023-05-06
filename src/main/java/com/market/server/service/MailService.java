@@ -13,7 +13,6 @@ import com.market.server.util.MailUtil;
 
 @Service
 public class MailService {
-	@Autowired
     private JavaMailSenderImpl mailSender;
 	private int size;
 	
